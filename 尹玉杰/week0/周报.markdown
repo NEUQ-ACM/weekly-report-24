@@ -1,0 +1,47 @@
+## 0601周报
+
+### 学习笔记，记录：
+ 
+ 1，看git的黑马程序员课程，初步了解了git的使用基础
+
+ 2，学会了用命令行语句和在idea中使用git
+
+ 3，刷力扣上的题。
+
+
+ ### 遇到难题，解决方法
+
+ 1，我下的idea是社区版，有些操作和课程中的不太一样，还需要再看一下。
+
+ 2，对github网站的使用不熟悉，还要多用用。
+ 
+ ### leetcode刷题：
+ 
+ #### leetcode01：两数之和
+
+##### 题解；
+   可以通过暴力直接枚举出答案，但也可以利用哈希，遍历数组，i为当前的下标，每个值都判断一次是否存在，如果不存在则存入map中，直到找到为止。
+
+### 代码：
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+      map<int,int> a;
+        vector<int> b(2,-1);//一个大小为2，值为-1的容器b
+        for(int i=0;i<nums.size();i++)
+        {
+            if(a.count(target-nums[i])>0)
+            {
+                b[0]=a[target-nums[i]];
+                b[1]=i;
+                break;
+            }
+            a[nums[i]]=i;
+        }
+        return b;
+
+    }
+};
+ 
+
+
