@@ -1,0 +1,33 @@
+body {
+    font: 16px/28px 'Microsoft YaHei';
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+}
+.gray {
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.search {
+    color: #666666;
+    width: 170px;
+}
+.btn {
+    font-weight: 700;
+}
+p {
+    text-indent: 2em;
+}
+.pic{
+    /*想要图片居中对齐，就要给他的父标签<p>加上水平居中代码*/
+    text-align: center;
+}
+.footer{
+    color: #888888;
+    font-size: 12px;
+}
