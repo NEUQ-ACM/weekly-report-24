@@ -1,0 +1,11 @@
+p {
+    color: red;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    color: blue;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
