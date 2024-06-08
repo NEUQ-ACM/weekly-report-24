@@ -1,0 +1,50 @@
+这是一次周报 *week1*
+--------
+
+### 学习笔记/记录
+本周都干了什么 ：
+> + 学习了html结构 和 css的一些简单属性
+>
+>（感觉其实前端也挺好玩的，似乎比直观不少，唔，感觉搞前端也挺不错。）
+>
+> + 刷github和b站的时候刷到好多前端的纯css的动画实现，收个藏先，也简单试了试
+> 
+> （感觉挺需要想象力的，实现过程挺复杂。再加上自己写了个，狗屎网站感觉css真是不好精通。）
+> 
+> + 尝试搭一个个人主页
+> 
+> （感觉html设计是最重要的，应该提前做好布局，而不是边想边写，这样真的很没效率QAQ.）
+> 
+> （真不好弄啊，带我好好研究研究，持续更新网站）
+> 
+> + 刷了几道题
+
+### 遇到的问题
+>1. div块元素无法在同一行显示，并排显示。
+> > 在style中将div的display属性设置为inline-block
+>2. div块和span的布局还是有点不太清楚，布局都是自己试出来的
+> > 菜就多练
+
+
+## leetcode刷题
+
+##### 力扣160.相交链表
+
+##### 题解
+
+```java
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) return null;
+        ListNode pa = headA, pb = headB;
+        while (pa != pb) {
+            if (pa != null) pa = pa.next;
+            else pa = headB;
+            if (pb != null) pb = pb.next;
+            else pb = headA;
+        }
+        return pa;
+    }
+}
+```
+核心就是两俩个链表变成登长的，那么这两个链表遍历时会在交点相交。
