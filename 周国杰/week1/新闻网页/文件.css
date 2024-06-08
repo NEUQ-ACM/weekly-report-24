@@ -1,0 +1,41 @@
+body {
+    font: 16px/28px 'Microsoft YaHei';
+}
+
+h1 {
+    font-weight: 400;
+    text-align: center;
+}
+
+.Timeset {
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Serchset {
+    color: #666666;
+    font-size: 12px;
+    width: 170;
+}
+
+.buttonset {
+    font-weight: 700;
+}
+
+p {
+    text-indent: 2em;
+}
+
+.pictureset {
+    text-align: center;
+}
+
+#footer {
+    color: #888888;
+    font-size: 12px;
+}
