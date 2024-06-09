@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font: 16px/28px "Microsoft YaHei";
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+}
+
+.title {
+    float: left;
+    margin: 0 40px;
+    padding-top: 40px;
+    width: 800px;
+}
+
+.detail {
+    float: left;
+    margin: 24px 100px;
+    width: 800px;
+}
+
+.date,
+.source,
+.search {
+    float: left;
+    margin-left: 20px;
+}
+
+.search-box {
+    padding: 0 12px;
+    border: 0.5px solid #858585;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 0 12px;
+    border: 0.5px solid #858585;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.text {
+    float: left;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 800px;
+}
+
+.subtitle {
+    padding: 12px 0;
+    font-size: 20px;
+    text-indent: 0;
+    font-weight: 700;
+}
+
+.image {
+    margin: 12px 80px;
+}
+
+.footer {
+    float: left;
+    margin: 12px auto;
+    width: 800px;
+    color: #888;
+    font-size: 12px;
+    text-indent: 0;
+}
