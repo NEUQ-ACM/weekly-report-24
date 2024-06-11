@@ -1,0 +1,52 @@
+html{
+    color: black;
+}
+
+.headline{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+ul{
+    list-style-type:none;
+	margin:0;
+	padding:0;
+	padding-top:6px;
+	padding-bottom:6px;
+    background-color: whitesmoke;
+}
+ul li{
+    display: inline;
+}
+a:link,a:visited{
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:cadetblue;
+	text-align:center;
+	padding:6px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+a:hover,a:active{
+    background-color: darkgrey;
+}
+.nowPage {
+    padding:6px;
+    text-align:center;
+    font-weight:bold;
+    background-color:deeppink;
+}
+
+form{
+    display: block;
+    text-align: center;
+}
+
+aside{
+    color: darkgrey;
+}
