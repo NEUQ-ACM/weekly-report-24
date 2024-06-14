@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xjedu.mapper.UserMapper">
+    <insert id="insert" parameterType="com.xjedu.entity.UserEntity">
+        INSERT INTO 'user'(username,password) VALUES(#{username},{password});
+    </insert>
+
+<!--对数据进行修改-->
+<update id="ipdate" parameterType="com.xjedu.entity.UserEntity">
+    UPDATE 'user' SET 'password' =${password}'123456' WHERE username =#{username};
+
+</update>
+    <update id="update"></update>
+
+<!--对数据进行删除操作-->
+    <delete id="delete" parameterType="com.xjedu.entity.UserEntity">
+        DELETE FROM 'user' WHERE username=#{username};
+    </delete>
+<!--对数据进行查询操作-->
+    <select id="select" parameterType="com.xjedu.entity.UserEntity" resultType="com.xjedu.entity.UserEntity">
+        SELECT  'passsword' FROM 'user' WHERE username=#{username};
+    </select>
+</mapper>
