@@ -1,0 +1,31 @@
+###  week3周报
+
+### 学习笔记，记录：
+
+     1，看黑马程序员pink老师前端入门，继续学习了css，大概了解了盒子模型，内外布局等内容。
+
+     2，黑马程序员的java课程，继续向后学习。
+
+     3，Mysql课程继续向后学习，主要学习了分页查询。
+
+### 遇到的困难即解决方法；
+
+    1,时间不够，大部分课都听得比较仓促，很多细节没有注意到（这周开始期末考试，还有课设）
+
+    解决办法：等到期末考试之后有些课程需要再重新学习一下。
+
+
+###  leetcode刷题：
+从这周开始刷数据库的题了！！
+
+1,查询可回收且低脂的产品：这个题直接通过表中的数值查询即可，代码如下：
+
+SELECT product_id FROM Products  WHERE low_fats = "Y" AND recyclable = "Y";
+
+2,寻找用户推荐人：
+
+  题解：这里的要点在于对none的值不能用等号，要用is none  或者  is not none
+
+  代码如下：select name from customer where referee_id != '2' or referee_id is null;
+
+这周还要准备期末考试，就少刷一点，下周补回来。
