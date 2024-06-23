@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class JdbcDemo {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/your_database"; // 替换为你的数据库URL
+        String url = "jdbc:mysql://localhost:3306/your_database";
         String user = "user";
         String password = "passwordaaa";
 
