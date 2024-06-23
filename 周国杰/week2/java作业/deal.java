@@ -1,8 +1,7 @@
 import java.sql.*;
 
-public class JdbcDemo {
+public class Demo {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/your_database";
         String user = "user";
         String password = "passwordaaa";
 
