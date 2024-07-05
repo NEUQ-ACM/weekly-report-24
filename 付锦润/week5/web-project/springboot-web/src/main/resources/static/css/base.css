@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    /*外边距*/
+    padding: 0;
+    /*内边距*/
+    box-sizing: border-box;
+    /*防侧方超出页面*/
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    /*取消列表样式*/
+}
+
+a {
+    text-decoration: none;
+    /*取消超链接下划线*/
+    color: black;
+    cursor: pointer;
+}
+
+input {
+    background-color: #dddd;
+    border: 0 none;
+    outline-style: none;
+    /*去除聚焦*/
+}
