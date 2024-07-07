@@ -1,0 +1,88 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.login-interface {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /*内容垂直居中*/
+    align-items: center;    /*内容水平居中*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*将元素自身的宽度和高度的一半向左上方移动*/
+    width: 700px;
+    height: 500px;
+    border: 2px solid #dddd;
+    transition: 1s;
+}
+
+.login-interface:hover {
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+    /*边框阴影*/
+}
+
+.login-interface h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.login-interface .input-box {
+    margin: 6px;
+}
+
+.login-interface .input-box>input {
+    margin: 6px;
+    height: 36px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 8px;
+    transition: 0.4s;
+    opacity: 0.8;
+    /*透明度*/
+}
+
+.login-interface .input-box>input:hover {
+    background-color: rgb(255, 255, 255, .5);
+    transition: 0.4s;
+    box-shadow: 0 0 10px black;
+}
+
+.login-interface .bottom-box {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 298px;
+    align-items: start;
+}
+
+.login-interface .bottom-box>a {
+    margin-left: auto;
+}
+
+.login-interface .bottom-box .btn-box {
+    display: flex;
+    margin-top: 15px;
+    width: 298px;
+}
+
+.login-interface .bottom-box .btn-box>button {
+    width: 40%;
+    height: 35px;
+    opacity: 0.8;
+    background-color: rgba(121, 255, 251, 0.8);
+    border: none;
+    transition: 0.4s;
+}
+
+.login-interface .bottom-box .btn-box>button:hover {
+    background-color: rgb(255, 206, 29, 0.8);
+    box-shadow: 0 0 10px rgb(255, 206, 29);
+    transition: 0.4s;
+}
+
+.login-interface .bottom-box .btn-box>button:nth-child(2) {
+    margin-left: auto;
+}
