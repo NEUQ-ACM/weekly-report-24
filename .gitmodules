@@ -1,0 +1,6 @@
+[submodule "万荣涛/WeeklyChecker"]
+	path = 万荣涛/WeeklyChecker
+	url = git@github.com:Stream29/WeeklyChecker.git
+[submodule "万荣涛/week5/LearnSpringBoot"]
+	path = 万荣涛/week5/LearnSpringBoot
+	url = git@github.com:Stream29/LearnSpringBoot.git
