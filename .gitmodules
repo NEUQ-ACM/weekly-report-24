@@ -7,3 +7,6 @@
 [submodule "万荣涛/week6/LearnMyBatis"]
 	path = 万荣涛/week6/LearnMyBatis
 	url = git@github.com:Stream29/LearnMyBatis.git
+[submodule "万荣涛/week6/EmployeeManagement"]
+	path = 万荣涛/week6/EmployeeManagement
+	url = git@github.com:Stream29/EmployeeManagement.git
