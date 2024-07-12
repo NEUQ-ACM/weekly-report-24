@@ -10,3 +10,6 @@
 [submodule "万荣涛/week6/EmployeeManagement"]
 	path = 万荣涛/week6/EmployeeManagement
 	url = git@github.com:Stream29/EmployeeManagement.git
+[submodule "付锦润/week6/Management"]
+	path = 付锦润/week6/Management
+	url = git@github.com:Twrathe/Management.git
