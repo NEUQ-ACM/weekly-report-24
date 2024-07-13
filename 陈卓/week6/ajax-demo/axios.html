@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>axios发送ajax请求</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.7.2/axios.min.js"></script>
+</head>
+
+<body>
+  <button>GET</button>
+  <button>POST</button>
+  <button>AJAX</button>
+
+  <script>
+    const btns = document.querySelectorAll('button');
+    btns[0].onclick = function () {
+      //GET
+      axios.get('http://127.0.0.1:8000/axios-server', {
+        //url参数
+        params: {
+          id: 100,
+          vip: 7
+        },
+        // 请求头信息
+        headers: {
+          name: 'cyvubin',
+          age: 20
+        }
+      })
+    }
+
+    btns[1].onclick = function () {
+
+      //POST
+      axios.post('http://127.0.0.1:8000/axios-server', {
+        //请求体
+
+        username: 'ytvubi',
+        password: 'cyvubkn'
+      }, {
+
+        //url参数
+        params: {
+          id: 200,
+          vip: 7
+        },
+
+        // 请求头信息
+        headers: {
+          name: 'cuybinychgjkjtcfhg',
+          age: 900
+        }
+      });
+    }
+
+    btns[2].onclick = function () {
+      axios({
+        //请求方法
+        method: 'POST',
+        //url
+        url:'http://127.0.0.1:8000/axios-server',
+        //url参数
+        params: {
+          id: 100,
+          vip: 7
+        },
+        headers: {
+          name: 'cyvubin',
+          age: 20
+        },
+        data: {
+          username: 'ytvubi',
+          password: 'cyvubkn'
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>
