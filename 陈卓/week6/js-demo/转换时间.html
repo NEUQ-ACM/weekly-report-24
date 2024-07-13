@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    let s = +prompt('请输入秒数')
+    function gettime(s) {
+      let h = parseInt(s / 60 / 60 % 24)
+      let m = parseInt(s / 60 % 60)
+      s = parseInt(s % 60)
+      return [h, m, s]
+    }
+    function bu0(num) {
+      num = num < 10 ? '0' + num : num
+      return num
+    }
+    let arr= gettime(s)
+    arr[0] = bu0(arr[0])
+    arr[1] = bu0(arr[1])
+    arr[2] = bu0(arr[2])
+    document.write(`${s}秒相当于是${arr[0]}时${arr[1]}分${arr[2]}秒`)
+  </script>
+</body>
+
+</html>
