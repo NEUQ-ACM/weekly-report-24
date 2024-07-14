@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <div class="box w">
+    <div class="box-hd">
+    </div>
+    <div class="box-bd">
+      <ul class="clearfix">
+        <script>
+          let data = [
+            {
+              src: 'images/course01.png',
+              title:'Think PHP 5.0 原神实战训练',
+              num: 1125
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神入门实战训练',
+              num: 426
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神基础实战训练',
+              num: 382
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神进阶实战训练',
+              num: 888
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神bsv实战训练',
+              num: 444
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神brterwea实战训练',
+              num: 555
+            },
+            {
+              src: 'images/course01.png',
+              title: 'Think PHP 5.0 原神6hewgfq实战训练',
+              num: 333
+            }
+          ]
+
+          for(let i=0;i<data.length;i++)
+          {
+            document.write(`
+            <li>
+              <a href="#">
+                <img src="${data[i].src}" alt="${data[i].title}">
+                <h4>
+                  ${data[i].title}
+                </h4>
+                <div class="info">
+                  <span>高级</span> ● <span>${data[i].num}</span>人在提瓦特大陆
+                </div>
+              </a>
+            </li>
+        `)
+          }
+        </script>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
