@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container {
+  margin: 10% auto;
+  width: 80%;
+  /* background-color: rgb(239, 167, 167); */
+}
+
+.panel {
+  border-radius: 50px;
+  margin-right: 10px;
+  height: 650px;
+  width: 100px;
+  float: left;
+  background-color: #666;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 700ms ease-in;
+}
+
+.main {
+  height: 650px;
+  width: 985px;
+  float: left;
+  background-color: orange;
+  margin: 0 10px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+/* @media screen {} */

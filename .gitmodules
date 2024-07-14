@@ -1,0 +1,15 @@
+[submodule "万荣涛/WeeklyChecker"]
+	path = 万荣涛/WeeklyChecker
+	url = git@github.com:Stream29/WeeklyChecker.git
+[submodule "万荣涛/week5/LearnSpringBoot"]
+	path = 万荣涛/week5/LearnSpringBoot
+	url = git@github.com:Stream29/LearnSpringBoot.git
+[submodule "万荣涛/week6/LearnMyBatis"]
+	path = 万荣涛/week6/LearnMyBatis
+	url = git@github.com:Stream29/LearnMyBatis.git
+[submodule "万荣涛/week6/EmployeeManagement"]
+	path = 万荣涛/week6/EmployeeManagement
+	url = git@github.com:Stream29/EmployeeManagement.git
+[submodule "付锦润/week6/Management"]
+	path = 付锦润/week6/Management
+	url = git@github.com:Twrathe/Management.git
