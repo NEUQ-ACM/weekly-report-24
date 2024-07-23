@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复请求问题</title>
+</head>
+<body>
+    <button>点击发送</button>
+    <script>
+        //如果我们一直发送请求，服务器就会压力比较大，会接收到非常多的相同请求，不太好
+        //所以我们可以在发送请求的时候，看一下之前有没有相同的，有的话，我们就可以把之前的取消掉，之后发送一个新的
+        //这样就可以只有一个请求，效率+
+        //获取元素对象
+        const btns = document.querySelectorAll('button');
+        let x = null;
+        //标识变量
+        let isSending = false;//是否正在发送AJAX请求 true在发/false未在发
+
+
+
+        btns[0].onclick = function () {
+            //所以我们这里可以判断标识变量
+            if (isSending) x.abort(); //如果正在发送，则取消该请求，创建一个新的请求
+            x = new XMLHttpRequest();
+            //这里我们就是在发送AJAX请求，所以更改状态
+            isSending = true;
+            x.open("GET", 'http://127.0.0.1:8000/delay');//注意这里还是延迟响应
+            x.send();
+            x.onreadystatechange = function () {
+                if (x.readyState === 4){
+                    //这里不用响应状态码吗？
+                    //这里可能是失败的请求，我们无论失败成功都要改，所以x.readyState === 4;即可
+                    //即发送完了
+                    isSending = false;
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>

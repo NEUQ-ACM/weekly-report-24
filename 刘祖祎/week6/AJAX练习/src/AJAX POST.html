@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX POST 请求</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 100px;
+            border: solid 1px #903;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        //获取元素对象
+        const result = document.getElementById("result");
+        //绑定事件
+        result.addEventListener("mouseover", function (){
+            //1.创建对象
+            const xhr = new XMLHttpRequest();
+            //2.初始化 设置类型与URL
+            xhr.open('POST', 'http://127.0.0.1:8000/server');
+            //设置请求头
+            //一般会把身份校验的信息放在请求头，传给服务器，对用户的身份做校验
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            //Content-Type表示请求体的类型，后面的一长串就是下面这个参数查询字符串的类型，是固定写法
+            //3，发送
+            //请求体格式是比较灵活的,前提是服务端要有与之对应的处理方式
+            xhr.send('a=100&b=200&c=300');
+            //xhr.send('a:100&b:200&c:300');
+            //xhr.send('123142386');
+            //4.事件绑定
+            xhr.onreadystatechange = function (){
+                //判断
+                if (xhr.readyState === 4){
+                    if (xhr.status >= 200 && xhr.status < 300){
+                        //处理服务器端返回的结果
+                        result.innerHTML = xhr.response;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
