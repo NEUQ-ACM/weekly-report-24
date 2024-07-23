@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX GET请求</title>
+  <style>
+    #result {
+      height: 200px;
+      width: 200px;
+      border: solid 5px rgb(64, 197, 146);
+    }
+  </style>
+</head>
+<body>
+  <button>点击发送请求</button>
+  <div id="result"></div>
+
+  <script>
+    const btn = document.getElementsByTagName(`button`)[0];
+    const result = document.getElementById(`result`);
+
+    btn.onclick = function() {
+      const xhr = new XMLHttpRequest();
+      xhr.open(`GET`,`http://127.0.0.1:8000/server`);
+      xhr.send();
+
+      //处理服务器端返回结果
+      xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4){
+          if(xhr.status >= 200 && xhr.status < 300){
+            //响应行
+            console.log(xhr.status);
+            console.log(xhr.statusText);
+            console.log(`所有的响应头\n${xhr.getAllResponseHeaders()}`);
+
+            //响应体
+            result.innerHTML = xhr.response;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
