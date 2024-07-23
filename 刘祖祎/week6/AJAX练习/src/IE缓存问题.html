@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE缓存问题</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 100px;
+            border: solid 1px #258;
+        }
+    </style>
+</head>
+<body>
+    <button>点击发送请求</button>
+    <div id="result"></div>
+    <script>
+        // IE缓存：ajax从服务器接受数据之后，会对结果进行一个缓存
+        // 但对时效性比较强的一些场景，再向服务端发送请求的时候
+        // 走的是本地缓存，而不是存储数据的缓存，从而会影响我们的结果
+        const btn = document.getElementsByTagName('button')[0];
+        const result = document.querySelector('#result');
+
+        btn.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", 'http://127.0.0.1:8000/ie?t='+Date.now());
+            //解决方法：加一个参数，获取一下当前时间的时间戳，两次时间戳不同，浏览器就会知道这是两次不同的请求，就会发新请求，而不会走本地缓存
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4){
+                    if(xhr.status >= 200 && xhr.status < 300){
+                        result.innerHTML = xhr.response;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
