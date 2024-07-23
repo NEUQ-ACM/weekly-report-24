@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON响应数据处理</title>
+  <style>
+    #result {
+      height: 300px;
+      width: 300px;
+      border: solid 4px blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div id="result"></div>
+
+  <script>
+    const result = document.getElementById(`result`);
+    window.onkeydown = function (){
+      const xhr = new XMLHttpRequest();
+      //设置响应体数据类型
+      xhr.responseType = `json`;
+      xhr.open(`GET`,`http://127.0.0.1:8000/json-server`);
+      xhr.send();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+          if(xhr.status === 200 || xhr.status === 304){
+            const response = xhr.response;
+            console.log(response);
+            result.innerHTML = response.name;
+          }
+        }
+      };
+    }
+  </script>
+</body>
+</html>
