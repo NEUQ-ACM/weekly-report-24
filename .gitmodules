@@ -16,3 +16,6 @@
 [submodule "付锦润/week8/Management"]
 	path = 付锦润/week8/Management
 	url = https://github.com/Twrathe/Management.git
+[submodule "韩文博/week8/--force"]
+	path = 韩文博/week8/--force
+	url = git@github.com:Maple-Yorkin/week8_practice.git
