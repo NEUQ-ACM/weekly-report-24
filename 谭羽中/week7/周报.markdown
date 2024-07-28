@@ -1,0 +1,5 @@
+*week7* 周报
+--------
+> + 学习了Linux和Redis的一些基础知识
+> + 成功地安装并启动了CentOS系统，用WSL启动了Ubuntu系统。
+> + 在Ubuntu系统中成功安装并运行了Redis
