@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求超时与网络异常</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 100px;
+            border: solid 1px #90b;
+        }
+    </style>
+</head>
+<body>
+    <button>点击发送请求</button>
+    <div id="result"></div>
+    <script>
+        //我们不能保证服务端永远都能及时快速响应
+        // 我们可以对ajax进行一个超时的设置，给用户一个提醒，在网络异常的时候，也给用户一个提醒
+        const btn = document.getElementsByTagName('button')[0];
+        const result = document.querySelector('#result');
+
+        btn.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+            //超时设置 2s 设置  如果2s还没有结果，就取消请求
+            xhr.timeout = 2000;
+            //超时回调
+            xhr.ontimeout = function () {
+                alert("网络异常，请稍后重试");
+            }
+            //网络异常回调
+            xhr.onerror = function () {
+                alert("你的网络似乎出了一些问题");
+            }
+            xhr.open("GET", 'http://127.0.0.1:8000/delay');
+            //解决方法：加一个参数，获取一下当前时间的时间戳，两次时间戳不同，浏览器就会知道这是两次不同的请求，就会发新请求，而不会走本地缓存
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4){
+                    if(xhr.status >= 200 && xhr.status < 300){
+                        result.innerHTML = xhr.response;
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

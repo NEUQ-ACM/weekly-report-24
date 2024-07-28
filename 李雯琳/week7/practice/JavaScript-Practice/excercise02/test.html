@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      width: 700px;
+      height: 300px;
+      border-left: 1px solid cornflowerblue;
+      border-bottom: 1px solid cornflowerblue;
+      margin: 50px auto;
+      justify-content: space-around;
+      align-items: flex-end;
+      text-align: center;
+    }
+
+    .box>div {
+      display: flex;
+      width: 50px;
+      background-color: aquamarine;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box div span {
+      margin-top: -20px;
+    }
+
+    .box div h4 {
+      margin-bottom: -50px;
+      width: 70px;
+      margin-left: -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    let size = +prompt("请输入总组数");
+
+    document.write(`<div class="box">`);
+    for (let i = 0; i < size; i++) {
+      let height = prompt(`请输入第${i+1}组数据`) + "px";
+      document.write(`
+        <div style="height: ${height};">
+          <span>123</span>
+          <h4>第${i+1}季度</h4>
+        </div>
+      `)
+    }
+    document.write(`</div>`);
+
+  </script>
+</body>
+</html>
