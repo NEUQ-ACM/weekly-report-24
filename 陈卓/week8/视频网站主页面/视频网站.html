@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pilipili</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>pilipili</h1>
+      <nav>
+        <ul>
+          <li><a href="https://www.bilibili.com/" target="_blank">首页</a></li>
+          <li><a href="https://www.bilibili.com/" target="_blank">热门</a></li>
+          <li><a href="https://www.bilibili.com/" target="_blank">订阅</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="videos" class="video-list">
+      <!-- 视频缩略图将会动态添加到这里 -->
+    </section>
+  </main>
+
+  <!-- 模态框结构 -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video id="videoPlayer" class="video-player" controls autoplay>
+        <source id="videoSource" src="" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.7.2/axios.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
