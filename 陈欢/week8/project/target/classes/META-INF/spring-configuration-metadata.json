@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "server",
+      "type": "practice_project.project.utils.LocalOSSProperties",
+      "sourceType": "practice_project.project.utils.LocalOSSProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "server.address",
+      "type": "java.lang.String",
+      "sourceType": "practice_project.project.utils.LocalOSSProperties"
+    },
+    {
+      "name": "server.port",
+      "type": "java.lang.Integer",
+      "sourceType": "practice_project.project.utils.LocalOSSProperties"
+    }
+  ],
+  "hints": []
+}
