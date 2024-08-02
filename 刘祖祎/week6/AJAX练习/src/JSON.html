@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON数据的响应</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 100px;
+            border: solid 1px #89b;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        const result = document.getElementById('result');
+        //绑定键盘按下事件
+        window.onkeydown = function () {
+            //发送请求
+            const xhr = new XMLHttpRequest();
+            //设置响应体数据的类型
+            xhr.responseType = 'json';
+            //初始化
+            xhr.open('GET', 'http://127.0.0.1:8000/json-server');
+            //发送
+            xhr.send();
+            //事件绑定
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4){
+                    if (xhr.status >= 200 && xhr.status < 300){
+                        // console.log(xhr.response);
+                        // result.innerHTML = xhr.response;
+                        //服务器响应了一个JSON格式字符串，如果结果比较复杂，想要提取某一个数据就会比较麻烦，我们可以...
+                        //手动对数据转化
+                        // let data = JSON.parse(xhr.response);
+                        // console.log(data);
+                        // result.innerHTML = data.name;
+                        //自动对数据转化  上面：设置响应体数据的类型
+                        console.log(xhr.response);
+                        result.innerHTML = xhr.response.name;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
