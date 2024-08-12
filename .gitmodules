@@ -19,3 +19,6 @@
 [submodule "韩文博/week8/week8_practice"]
 	path = 韩文博/week8/week8_practice
 	url = git@github.com:Maple-Yorkin/week8_practice.git
+[submodule "付锦润/week10/sky-take-out"]
+	path = 付锦润/week10/sky-take-out
+	url = git@github.com:Moistrocic/sky-take-out.git
