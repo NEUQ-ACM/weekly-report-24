@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mp?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+logging:
+  level:
+    com.itheima: debug
+  pattern:
+    dateformat: HH:mm:ss
+#mybatis:
+#  mapper-locations: classpath*:mapper/*.xml
+mybatis-plus:
+  type-aliases-package: com.itheima.mp.domain.po
+  mapper-locations: "classpath*:/mapper/**/*.xml"
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  global-config:
+    db-config:
+      id-type: auto
+#knife4j:
+#  enable: true
+#  openapi:
+#    title: 用户管理接口文档
+#    description: "用户管理接口文档"
+#    email: zhanghuyi@itcast.cn
+#    concat: 虎哥
+#    url: https://www.itcast.cn
+#    version: v1.0.0
+#    group:
+#      default:
+#        group-name: default
+#        api-rule: package
