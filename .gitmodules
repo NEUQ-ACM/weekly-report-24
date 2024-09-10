@@ -19,3 +19,9 @@
 [submodule "万荣涛/RepositoryChecker"]
 	path = 万荣涛/RepositoryChecker
 	url = git@github.com:Stream29/RepositoryChecker.git
+[submodule "韩文博/week12/vue-rabbit"]
+	path = 韩文博/week12/vue-rabbit
+	url = git@github.com:Maple-Yorkin/vue-rabbit.git
+[submodule "万荣涛/week11/HeimaDianping"]
+	path = 万荣涛/week11/HeimaDianping
+	url = git@github.com:Stream29/HeimaDianping.git
